@@ -79,7 +79,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-          <div className="tick-grid mt-4" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }} data-stagger>
+          <div className="tick-grid cols-4 mt-4" data-stagger>
             {values.map((v) => (
               <div className="tick-card reveal" key={v.t}>
                 <span className="icon-badge"><Icon name={v.icon} /></span>

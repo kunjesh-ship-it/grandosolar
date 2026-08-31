@@ -81,7 +81,7 @@ export default async function ServicePage({ params }) {
           <SectionHeader tag="Other services" title="Everything else we handle for you." align="center" />
           <div className="row g-4 mt-2" data-stagger>
             {others.map((o) => (
-              <div className="col-md-4" key={o.slug}>
+              <div className="col-md-6 col-lg-4" key={o.slug}>
                 <div className="card-gs reveal">
                   <span className="icon-badge"><Icon name={o.icon} /></span>
                   <h3 className="h4">{o.title}</h3>

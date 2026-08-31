@@ -15,6 +15,7 @@ export const metadata = {
   description: 'Grando Solar Energy installs storm-safe rooftop, ground-mounted and carport solar plants for homes, societies and industries across Surat, Vadodara, Vapi, Bharuch and Ahmedabad.',
   applicationName: 'Grando Solar',
   robots: { index: true, follow: true },
+  other: { 'grando-build': 'v1.2-audit-complete-2026-08-31' },
   openGraph: { type: 'website', locale: 'en_IN', siteName: site.legalName },
 };
 

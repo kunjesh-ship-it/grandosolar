@@ -289,6 +289,11 @@ img { max-width: 100%; height: auto; }
   .card-gs { padding: 24px; }
   .btn-gs { padding: 13px 22px; font-size: 0.86rem; }
   body { font-size: 0.96rem; }
+  /* Mobile typography: keep headings prominent without excessive wrapping/height */
+  h1, .h1 { font-size: clamp(1.9rem, 7.6vw, 2.4rem); line-height: 1.12; }
+  h2, .h2 { font-size: clamp(1.5rem, 6.4vw, 1.9rem); line-height: 1.18; }
+  .sec-lead { font-size: 0.98rem; }
+  .page-hero .lead { font-size: 1rem; }
 }
 @media (max-width: 767.98px) { .row.g-5 { --bs-gutter-x: 1.5rem; } }
 

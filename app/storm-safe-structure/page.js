@@ -51,7 +51,11 @@ export default function StructurePage() {
               <thead><tr><th>Component</th><th className="us">Grando storm-safe structure</th><th>Typical low-cost structure</th></tr></thead>
               <tbody>
                 {compare.map((r) => (
-                  <tr key={r.k}><td className="fw-bold text-navy">{r.k}</td><td className="us"><Icon name="check" size={16} strokeWidth={3} /> {r.us}</td><td><Icon name="close" size={16} /> {r.them}</td></tr>
+                  <tr key={r.k}>
+                    <td className="fw-bold text-navy cmp-k" data-label="Component">{r.k}</td>
+                    <td className="us" data-label="Grando storm-safe structure"><Icon name="check" size={16} strokeWidth={3} /> {r.us}</td>
+                    <td data-label="Typical low-cost structure"><Icon name="close" size={16} /> {r.them}</td>
+                  </tr>
                 ))}
               </tbody>
             </table>
@@ -65,6 +69,17 @@ export default function StructurePage() {
             .cmp-table td.us svg { color: var(--gs-green); margin-right: 6px; }
             .cmp-table td:last-child { color: var(--gs-muted); }
             .cmp-table td:last-child svg { color: #c0392b; margin-right: 6px; }
+            /* Mobile: stacked card layout instead of a clipped table */
+            @media (max-width: 767.98px) {
+              .cmp-table { border: 0; }
+              .cmp-table thead { display: none; }
+              .cmp-table, .cmp-table tbody, .cmp-table tr, .cmp-table td { display: block; width: 100%; }
+              .cmp-table tr { border: 1px solid var(--gs-line); border-radius: var(--radius); overflow: hidden; margin-bottom: 14px; background: #fff; }
+              .cmp-table td { border: 0; padding: 12px 16px; }
+              .cmp-table td.cmp-k { background: var(--gs-navy-900); color: #fff !important; font-family: var(--ff-heading); padding: 12px 16px; }
+              .cmp-table td[data-label]:not(.cmp-k)::before { content: attr(data-label); display: block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gs-muted); margin-bottom: 4px; }
+              .cmp-table td.us[data-label]::before { color: var(--gs-green-600); }
+            }
           `}</style>
         </div>
       </section>
